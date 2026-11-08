@@ -54,7 +54,7 @@ export const site = {
       },
       {
         title: "AI security / decision tools",
-        detail: "Local LLM audit UIs, multi-agent workflows, structured reports.",
+        detail: "Local LLM security audit UIs, AST vulnerability analysis, structured diffs.",
       },
     ],
   },
@@ -86,7 +86,7 @@ export const skills = [
   },
   {
     category: "AI & Trading Systems",
-    items: ["CrewAI", "LangGraph", "Groq API", "MetaTrader 5", "Risk Gates", "Ops Monitoring"],
+    items: ["Ollama", "Local LLMs", "AST Analysis", "MetaTrader 5", "Risk Gates", "Ops Monitoring"],
   },
 ];
 
@@ -286,9 +286,9 @@ export const projects: Project[] = [
   {
     slug: "mysmartcoach",
     title: "MySmartCoach App",
-    image: "/assets/mysmartcoach-ui.png",
-    imageAlt: "MySmartCoach brand",
-    stack: ["Flutter", "Flask", "Postgres", "Aiven"],
+    image: "/assets/mysmartcoach-ui.jpg",
+    imageAlt: "MySmartCoach Flutter Mobile Fitness Platform",
+    stack: ["Flutter", "Dart", "Flask", "Postgres", "Aiven"],
     featured: false,
     outcome: "Mobile + API product shipped",
     summary:
@@ -313,96 +313,34 @@ export const projects: Project[] = [
     ],
     gallery: [
       {
-        title: "Production Mobile Training Interface",
-        description: "Flutter client UI featuring progressive warm-up routines, workout splits, and rest timers.",
-        image: "/assets/mysmartcoach-screens.png",
+        title: "Workout Split & Set Tracker",
+        description: "Log sets, weights, and reps with automatic progression and rest timer intervals.",
+        image: "/assets/mysmartcoach-screen-workout.png",
       },
       {
-        title: "Complete Product Flow Storyboard",
-        description: "Architectural UX storyboard tracing user onboarding, workout execution, and recovery tracking.",
-        image: "/assets/mysmartcoach-storyboard.jpg",
+        title: "Exercise Breakdown & Form Guidance",
+        description: "Anatomical muscle targets, form cues, and video-assisted technique instructions.",
+        image: "/assets/mysmartcoach-screen-exercise.png",
       },
       {
-        title: "Brand & App Store Presentation",
-        description: "Cross-platform mobile presentation and visual design shipped to staging and production.",
-        image: "/assets/mysmartcoach-banner.png",
-      },
-    ],
-  },
-  {
-    slug: "multi-agent-ai",
-    title: "Multi-Agent AI Decision Systems",
-    image: "/assets/multi-agent-ai-ui.png",
-    imageAlt: "Multi-Agent AI",
-    stack: ["CrewAI", "LangGraph", "Groq"],
-    featured: false,
-    outcome: "Structured multi-agent decisions",
-    summary:
-      "Agent architectures for market evaluation, risk checks, and news analysis with clear decision separation.",
-    description:
-      "I build multi-agent AI systems with CrewAI, LangGraph, and Groq for research and risk-aware decisions.",
-    problem:
-      "Single-prompt AI collapses research, risk, and synthesis into one unreliable answer.",
-    role: "I designed agent roles and orchestration so each concern stays specialized.",
-    solution:
-      "CrewAI/LangGraph flows with dedicated evaluation, risk, and news agents on low-latency Groq inference.",
-    result:
-      "A repeatable decision architecture that separates analysis stages instead of hoping one prompt does everything.",
-    lesson:
-      "In high-stakes domains, process design beats clever prompting.",
-    features: [
-      "CrewAI and LangGraph orchestration patterns",
-      "Market asset evaluation agents",
-      "Risk management decision layers",
-      "Real-time news analysis pipelines",
-      "Groq API for low-latency inference",
-    ],
-    gallery: [
-      {
-        title: "Multi-Agent Orchestration Graph",
-        description: "Decoupled LangGraph & CrewAI workflows for research, risk assessment, and synthesis.",
-        image: "/assets/multi-agent-ai-workflow.png",
-      },
-    ],
-  },
-  {
-    slug: "edu-software",
-    title: "Interactive Educational Software",
-    image: "/assets/edu-software-ui.png",
-    imageAlt: "Educational Software",
-    stack: ["Games", "Speech Synthesis", "UX"],
-    featured: false,
-    outcome: "Play-based learning loops",
-    summary:
-      "Children’s learning games for numbers, shapes, and animal flashcards with English speech synthesis.",
-    description:
-      "I created interactive educational software that turns vocabulary and concepts into short playful sessions.",
-    problem:
-      "Young learners disengage quickly when education feels like drills instead of play.",
-    role: "I designed the interaction loops, content modes, and speech-assisted feedback.",
-    solution:
-      "Games for numbers and geometry plus photographic animal flashcards with English speech synthesis.",
-    result:
-      "Short-session educational experiences built for attention, repetition, and spoken reinforcement.",
-    lesson:
-      "For kids’ products, feedback speed and delight beat content volume.",
-    features: [
-      "Number and geometry learning games",
-      "Photographic animal flashcards",
-      "English speech synthesis integration",
-      "Child-friendly interaction patterns",
-      "Custom game loops designed for short sessions",
-    ],
-    gallery: [
-      {
-        title: "Interactive Flashcards & Speech Engine",
-        description: "Photographic animal and vocabulary flashcards with real-time English speech synthesis.",
-        image: "/assets/edu-game-cards.png",
+        title: "Nutrition Diary & Macro Tracking",
+        description: "Daily calorie targets, macronutrient breakdowns, and barcode food logging.",
+        image: "/assets/mysmartcoach-screen-nutrition.png",
       },
       {
-        title: "Numbers & Geometry Mini-Games",
-        description: "Play-based feedback loops designed for fast retention and joyful child interaction.",
-        image: "/assets/edu-interactive-quiz.png",
+        title: "Step-by-Step Exercise Execution",
+        description: "Real-time active workout mode guiding the athlete through each repetition phase.",
+        image: "/assets/mysmartcoach-screen-steps.png",
+      },
+      {
+        title: "Movement & Equipment Alternatives",
+        description: "Smart swap engine offering biomechanically equivalent exercises based on gym equipment.",
+        image: "/assets/mysmartcoach-screen-alternatives.png",
+      },
+      {
+        title: "Daily Readiness & Habit Streaks",
+        description: "Bodyweight tracking, training consistency streaks, and recovery readiness scoring.",
+        image: "/assets/mysmartcoach-screen-profile.png",
       },
     ],
   },

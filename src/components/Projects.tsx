@@ -40,7 +40,7 @@ export function Projects() {
           </div>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {secondaryProjects.map((project, index) => (
             <Reveal key={project.slug} delayMs={index * 70}>
               <ProjectCard
