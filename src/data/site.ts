@@ -14,6 +14,11 @@ export type Project = {
   solution: string;
   result: string;
   lesson: string;
+  gallery?: {
+    title: string;
+    description: string;
+    image: string;
+  }[];
 };
 
 export const site = {
@@ -144,6 +149,33 @@ export const projects: Project[] = [
       "Automated WhatsApp & PDF invoice dispatch",
       "Dynamic promotions engine (percentage, fixed amount, Buy-X-Get-Y)",
       "Daily automated cloud backups to Google Drive & CSV exports",
+    ],
+    gallery: [
+      {
+        title: "Fast Barcode POS & Checkout",
+        description: "Instant USB barcode scanning, item search, and live unit pricing for hardware & accessories.",
+        image: "/assets/retail-screen-pos.png",
+      },
+      {
+        title: "Sales & Revenue Analytics",
+        description: "Real-time metrics: top-moving items, dead stock alerts, and daily gross revenue tracking.",
+        image: "/assets/retail-screen-analytics.png",
+      },
+      {
+        title: "Serialized IMEI & Product Catalog",
+        description: "Automated SKU generation, category partitioning, and serialized IMEI warranty binding.",
+        image: "/assets/retail-screen-catalog.png",
+      },
+      {
+        title: "Operational Expense Tracking",
+        description: "Categorized ledger for daily shop expenses, utility bills, and cashier shift reconciliation.",
+        image: "/assets/retail-screen-expenses.png",
+      },
+      {
+        title: "Returns & Exchange Workflow",
+        description: "Automated inventory adjustment upon verified return with invoice reference lookups.",
+        image: "/assets/retail-screen-returns.png",
+      },
     ],
   },
   {

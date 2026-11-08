@@ -124,6 +124,44 @@ export default async function ProjectPage({ params }: PageProps) {
                 </ul>
               </div>
 
+              {project.gallery && project.gallery.length > 0 && (
+                <div className="space-y-6 pt-4">
+                  <div className="border-b border-line pb-4">
+                    <span className="eyebrow">Real system interfaces</span>
+                    <h2 className="mt-2 font-[family-name:var(--font-display)] text-2xl font-bold text-snow">
+                      Live Production Captures
+                    </h2>
+                    <p className="mt-1 text-sm text-muted">
+                      Direct interfaces from daily operations: barcode POS, serialized inventory, and accounting.
+                    </p>
+                  </div>
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    {project.gallery.map((item) => (
+                      <div
+                        key={item.title}
+                        className="group overflow-hidden rounded-xl border border-line bg-ink-soft/80 transition duration-300 hover:border-accent/40 hover:bg-panel"
+                      >
+                        <div className="flex justify-center overflow-hidden bg-ink/70 p-3">
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="max-h-96 w-auto rounded-lg object-contain transition duration-500 group-hover:scale-[1.02]"
+                          />
+                        </div>
+                        <div className="border-t border-line/60 p-4">
+                          <h3 className="font-semibold text-snow transition group-hover:text-accent">
+                            {item.title}
+                          </h3>
+                          <p className="mt-1 text-xs leading-relaxed text-muted">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div className="flex flex-wrap gap-4 border-t border-line pt-8">
                 <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent(`About ${project.title}`)}`}
