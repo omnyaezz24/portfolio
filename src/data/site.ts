@@ -119,6 +119,18 @@ export const projects: Project[] = [
       "High-concurrency SQLite/Flask architecture with read-replica safety",
       "Role-partitioned operational dashboard with audit logging and SLA metrics",
     ],
+    gallery: [
+      {
+        title: "Ingestion Throughput & SLA Metrics",
+        description: "Real-time metrics tracking 5,420 cases, 62.8K attachments, and 99.98% ingestion SLA.",
+        image: "/assets/enterprise-analytics-pipeline.jpg",
+      },
+      {
+        title: "Unified Case Resolution Grid",
+        description: "Deterministic indexing and multi-tier path resolution with anonymized case IDs and audit tags.",
+        image: "/assets/enterprise-analytics-overview.jpg",
+      },
+    ],
   },
   {
     slug: "cloud-retail-pos",
@@ -206,6 +218,23 @@ export const projects: Project[] = [
       "Automated Python ops monitoring and health checks",
       "Live-capable and shadow deployment workflows",
     ],
+    gallery: [
+      {
+        title: "Multi-Symbol Live Terminal Operations",
+        description: "Continuous execution across Gold (XAUUSD), EURUSD, and USDJPY with spread & news gates.",
+        image: "/assets/mt5-trading-terminal.png",
+      },
+      {
+        title: "Strategy & Entry Execution Filters",
+        description: "Automated chart monitoring with dynamic trailing stops and economic calendar blackout windows.",
+        image: "/assets/mt5-chart-execution.png",
+      },
+      {
+        title: "Order Book & Terminal Health Observability",
+        description: "Python monitoring service auditing latency, ticket logs, and trade slip gates.",
+        image: "/assets/mt5-execution-log.png",
+      },
+    ],
   },
   {
     slug: "security-auditor-dashboard",
@@ -236,6 +265,23 @@ export const projects: Project[] = [
       "Side-by-side diff, follow-up chat, and JSON/Markdown export",
       "Eval suite plus optional Bandit baseline compare",
     ],
+    gallery: [
+      {
+        title: "Interactive AI Code Audit Workstation",
+        description: "Local LLM code audit interface featuring multi-language syntax parsing and severity ratings.",
+        image: "/assets/security-auditor-real-ui.png",
+      },
+      {
+        title: "Full-Spectrum AST & Vulnerability Workflow",
+        description: "High-resolution workflow breakdown: prompt conditioning, Bandit baseline comparison, and diff generation.",
+        image: "/assets/security-auditor-workflow.png",
+      },
+      {
+        title: "Local Model Architecture & Pipeline Routing",
+        description: "Private zero-cloud infrastructure diagram linking Ollama (Gemma/Llama 3) with Flask and Markdown export.",
+        image: "/assets/security-auditor-architecture.jpg",
+      },
+    ],
   },
   {
     slug: "mysmartcoach",
@@ -264,6 +310,23 @@ export const projects: Project[] = [
       "Optimistic UI updates for a snappy mobile feel",
       "Offline caching for workouts and recent activity",
       "Flask REST API with Postgres on a managed host",
+    ],
+    gallery: [
+      {
+        title: "Production Mobile Training Interface",
+        description: "Flutter client UI featuring progressive warm-up routines, workout splits, and rest timers.",
+        image: "/assets/mysmartcoach-screens.png",
+      },
+      {
+        title: "Complete Product Flow Storyboard",
+        description: "Architectural UX storyboard tracing user onboarding, workout execution, and recovery tracking.",
+        image: "/assets/mysmartcoach-storyboard.jpg",
+      },
+      {
+        title: "Brand & App Store Presentation",
+        description: "Cross-platform mobile presentation and visual design shipped to staging and production.",
+        image: "/assets/mysmartcoach-banner.png",
+      },
     ],
   },
   {
@@ -294,6 +357,13 @@ export const projects: Project[] = [
       "Real-time news analysis pipelines",
       "Groq API for low-latency inference",
     ],
+    gallery: [
+      {
+        title: "Multi-Agent Orchestration Graph",
+        description: "Decoupled LangGraph & CrewAI workflows for research, risk assessment, and synthesis.",
+        image: "/assets/multi-agent-ai-workflow.png",
+      },
+    ],
   },
   {
     slug: "edu-software",
@@ -322,6 +392,18 @@ export const projects: Project[] = [
       "English speech synthesis integration",
       "Child-friendly interaction patterns",
       "Custom game loops designed for short sessions",
+    ],
+    gallery: [
+      {
+        title: "Interactive Flashcards & Speech Engine",
+        description: "Photographic animal and vocabulary flashcards with real-time English speech synthesis.",
+        image: "/assets/edu-game-cards.png",
+      },
+      {
+        title: "Numbers & Geometry Mini-Games",
+        description: "Play-based feedback loops designed for fast retention and joyful child interaction.",
+        image: "/assets/edu-interactive-quiz.png",
+      },
     ],
   },
 ];
