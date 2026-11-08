@@ -50,7 +50,7 @@ export default async function ProjectPage({ params }: PageProps) {
   return (
     <>
       <Navbar />
-      <main className="pt-24 sm:pt-28">
+      <main id="top" className="pt-24 sm:pt-28">
         <article className="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
           <Link
             href="/#work"

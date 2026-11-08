@@ -16,13 +16,30 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://omnya-ezz.vercel.app"),
+  metadataBase: new URL("https://portfolio-seven-bice-56.vercel.app"),
   title: `${site.name} — ${site.role}`,
   description: site.promise,
   openGraph: {
     title: `${site.name} — ${site.role}`,
     description: site.promise,
+    url: "https://portfolio-seven-bice-56.vercel.app",
+    siteName: `${site.name} Portfolio`,
+    images: [
+      {
+        url: "/assets/cloud-retail-ui.jpg",
+        width: 1920,
+        height: 1080,
+        alt: `${site.name} — Engineering Systems Portfolio`,
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — ${site.role}`,
+    description: site.promise,
+    images: ["/assets/cloud-retail-ui.jpg"],
   },
 };
 

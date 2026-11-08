@@ -196,7 +196,7 @@ export const projects: Project[] = [
     image: "/assets/mt5-eas-ui.png",
     imageAlt: "MetaTrader 5 Expert Advisors",
     stack: ["MQL5", "Python", "MT5"],
-    featured: true,
+    featured: false,
     outcome: "News + spread gates · multi-symbol ops",
     summary:
       "Production-minded Expert Advisors with news filters, spread gates, and Python monitoring for Gold, EURUSD, and USDJPY.",
