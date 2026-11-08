@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Base neutrals — refined, slightly warm near-black */
+  --color-ink: #09090b;
+  --color-ink-soft: #0d0e12;
+  --color-panel: #121319;
+  --color-panel-2: #16181f;
+  --color-line: rgba(255, 255, 255, 0.07);
+  --color-line-strong: rgba(255, 255, 255, 0.12);
+
+  /* Text */
+  --color-muted: #8b8f98;
+  --color-fog: #c4c7cf;
+  --color-snow: #f4f4f5;
+
+  /* Single restrained accent */
+  --color-accent: #5eead4;
+  --color-accent-dim: #2dd4bf;
+  --color-accent-deep: #0f766e;
+  --color-warm: #e4b063;
+
+  --font-display: var(--font-syne);
+  --font-body: var(--font-jakarta);
+
+  --shadow-elev: 0 24px 60px -24px rgba(0, 0, 0, 0.75);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-snow);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fine grain overlay for a premium, non-flat surface */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+  color: #fff;
+}
+
+/* Thin, refined scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+h1,
+h2,
+h3 {
+  font-feature-settings: "ss01";
+}
+
+/* ---- Reusable layout rhythm ---- */
+.section {
+  position: relative;
+  padding-block: clamp(5rem, 11vw, 9rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: color-mix(in oklab, var(--color-accent) 70%, transparent);
+}
+
+/* ---- Animations (restrained) ---- */
+@keyframes aurora {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(1.5%, -2%, 0) scale(1.06);
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 20s ease-in-out infinite;
+}
+
+.animate-rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-rise-delay-1 {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+.animate-rise-delay-2 {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+.animate-rise-delay-3 {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both;
+}
+.animate-rise-delay-4 {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.44s both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---- Decorative ---- */
+.grid-atmosphere {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 65% 55% at 50% 25%, black 15%, transparent 72%);
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, var(--color-snow) 55%, color-mix(in oklab, var(--color-snow) 40%, transparent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-sheen {
+  position: relative;
+}
+.card-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    140deg,
+    color-mix(in oklab, var(--color-accent) 35%, transparent),
+    transparent 40%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.group:hover .card-sheen::after {
+  opacity: 1;
+}
