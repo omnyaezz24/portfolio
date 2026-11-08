@@ -87,32 +87,63 @@ export const skills = [
 
 export const projects: Project[] = [
   {
-    slug: "moi-analytics",
-    title: "Internal Reporting & Case Analytics ('moi')",
-    image: "/assets/moi-analytics-ui.png",
-    imageAlt: "moi analytics command center",
-    stack: ["Flask", "SQLite", "Jinja", "ETL"],
+    slug: "enterprise-case-analytics",
+    title: "Enterprise Case Analytics & Document Pipeline",
+    image: "/assets/enterprise-analytics-ui.jpg",
+    imageAlt: "Enterprise Case Analytics & Document Pipeline Command Center",
+    stack: ["Flask", "Python", "SQLite", "ETL Pipelines", "Data Ingestion"],
     featured: true,
-    outcome: "5,400+ records · 62k+ attachments",
+    outcome: "5,400+ case records · 62k+ attachments resolved",
     summary:
-      "Mission-critical analytics platform that turns heavy case data into a real-time command center for operators.",
+      "High-throughput enterprise records platform that aggregates mission-critical case data, documents, and attachments into a unified operational command center.",
     description:
-      "I designed and implemented an internal reporting and case analytics platform built with Flask, SQLite, and Jinja for high-stakes operational visibility.",
+      "I designed and implemented an enterprise-grade reporting and case analytics infrastructure built with Flask, SQLite, and Jinja for high-stakes operational visibility.",
     problem:
-      "Operators needed fast, trustworthy visibility across thousands of cases and attachments — without fragile manual spreadsheets or broken file paths.",
-    role: "I owned architecture, ETL, dashboard UX, and attachment/path reliability end to end.",
+      "Operators and auditors faced fragmented, siloed data across legacy systems — struggling with missing attachment paths, slow manual lookups, and unindexed physical documents.",
+    role: "I owned architecture, ETL ingestion, attachment path resolution engine, and dashboard UX end to end.",
     solution:
-      "I built ETL pipelines, QR caching, attachment path resolution, and a war-room style analytics UI optimized for decision speed.",
+      "Implemented resilient ETL ingestion pipelines, QR-code lookup indexing, deterministic path resolution across multi-tier storage, and real-time operational views.",
     result:
-      "The system supports 5,400+ records and 62,000+ attachments with read-only production-safe workflows and live operational views.",
+      "Successfully indexed and resolved 5,400+ enterprise cases and 62,000+ linked attachments with sub-second retrieval speeds and zero document loss.",
     lesson:
-      "In ops software, reliability and path integrity matter more than fancy charts — trust is the product.",
+      "In enterprise operations software, deterministic data integrity and path verification always supersede superficial visuals — reliability is the product.",
     features: [
-      "Complex ETL pipelines for case and report ingestion",
-      "QR code caching for fast lookup workflows",
-      "Attachment path resolution across large file trees",
-      "Handles 5,400+ records and 62,000+ attachments",
-      "Server-rendered Jinja views optimized for operators",
+      "High-throughput ETL pipelines for bulk case ingestion & normalization",
+      "Automated attachment resolution engine handling 62,000+ multi-format documents",
+      "Deterministic QR-code caching layer for instant physical file retrieval",
+      "High-concurrency SQLite/Flask architecture with read-replica safety",
+      "Role-partitioned operational dashboard with audit logging and SLA metrics",
+    ],
+  },
+  {
+    slug: "cloud-retail-pos",
+    title: "OmniRetail — Cloud POS, Inventory & ERP Platform",
+    image: "/assets/cloud-retail-ui.jpg",
+    imageAlt: "OmniRetail Cloud POS and ERP Platform",
+    stack: ["Google Apps Script", "JavaScript", "Sheets API", "PWA", "ESC/POS", "Android"],
+    featured: true,
+    outcome: "Full retail lifecycle · offline-first PWA",
+    summary:
+      "Commercial-grade POS and ERP engine powering end-to-end store operations: barcode checkout, thermal printing, serialized warranty, and live accounting.",
+    description:
+      "I engineered a full-scale cloud POS, inventory, and retail management system built with Google Apps Script, Sheets API, service workers, and an Android client.",
+    problem:
+      "Retailers struggle with expensive, bloated POS systems that require dedicated servers, fail when internet drops, and lack serialized hardware/warranty tracking.",
+    role: "I designed and implemented the entire cloud backend, offline PWA architecture, ESC/POS printing engine, and Android application wrapper.",
+    solution:
+      "Built an offline-first PWA with multi-role permissions (Admin/Cashier), ESC/POS 58/80mm thermal receipt printing, automated WhatsApp/PDF invoices, IMEI warranty tracking, supplier purchase cycles, and real-time ledger accounting.",
+    result:
+      "Delivered a zero-server-maintenance ERP solution handling high-volume daily sales, barcode scanning, deficit alerts, daily Google Drive backups, and shift reconciliations.",
+    lesson:
+      "Reliable retail software must be offline-resilient and instant at checkout — cashier speed directly impacts revenue.",
+    features: [
+      "Barcode scanning and 58mm/80mm ESC/POS direct thermal receipt printing",
+      "Offline-first PWA with background sync and native Android APK wrapper",
+      "Role-based access control (Admin & Cashier shift auditing)",
+      "Serialized IMEI warranty tracking & maintenance service ticketing",
+      "Automated WhatsApp & PDF invoice dispatch",
+      "Dynamic promotions engine (percentage, fixed amount, Buy-X-Get-Y)",
+      "Daily automated cloud backups to Google Drive & CSV exports",
     ],
   },
   {

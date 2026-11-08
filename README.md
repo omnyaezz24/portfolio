@@ -30,7 +30,8 @@ SVG covers ship in `public/assets/`. To use your own screenshots, replace the ma
 | Project | File / slug |
 |---|---|
 | MySmartCoach | `mysmartcoach-ui.svg` → `/projects/mysmartcoach` |
-| moi analytics | `moi-analytics-ui.svg` → `/projects/moi-analytics` |
+| Enterprise Case Analytics | `enterprise-analytics-ui.jpg` → `/projects/enterprise-case-analytics` |
+| OmniRetail POS | `cloud-retail-ui.jpg` → `/projects/cloud-retail-pos` |
 | MT5 EAs | `mt5-eas-ui.svg` → `/projects/mt5-eas` |
 | Multi-Agent AI | `multi-agent-ai-ui.svg` → `/projects/multi-agent-ai` |
 | Educational Software | `edu-software-ui.svg` → `/projects/edu-software` |
